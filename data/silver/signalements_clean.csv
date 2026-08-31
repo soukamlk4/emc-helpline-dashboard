@@ -1,0 +1,139 @@
+﻿id,cyberharcelementType,plateforme,accompagnement,date,genre,age,typeAccompagnement,langue,anonymat,annee,mois,statut_age,accomp_juridique,accomp_psychique,accomp_suppression
+979,Publication de photos intimes ou personnelles,Facebook,Non,2025-01-01,Masculin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+980,Publication de photos intimes ou personnelles,Instagram,Non,2025-01-02,Féminin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+981,Publication de photos intimes ou personnelles,Facebook,Oui,2025-01-03,Féminin,18-25 ans,Juridique;Psychique;Suppression,ar,Non,2025,1,Jeune adulte,1,1,1
+982,Autres,Facebook,Non,2025-01-04,Féminin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+983,Autres,Facebook,Non,2025-01-05,Féminin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+984,Propos de haine,Instagram,Oui,2025-01-06,Féminin,+26 ans,Juridique;Suppression,fr,Non,2025,1,Adulte,1,0,1
+985,Propos de haine,Instagram,Non,2025-01-07,Féminin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+986,Menace de publier des photos intimes ou personnelles,Instagram,Non,2025-01-08,Féminin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+987,Propos de haine,Facebook,Non,2025-01-09,Masculin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+988,Diffamation,Instagram,Non,2025-01-10,Masculin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+989,Diffamation,Instagram,Non,2025-01-11,Masculin,18-25 ans,Suppression,ar,Oui,2025,1,Jeune adulte,0,0,1
+990,Publication de photos intimes ou personnelles,Instagram,Non,2025-01-12,Masculin,18-25 ans,Suppression,ar,Oui,2025,1,Jeune adulte,0,0,1
+991,Publication de photos intimes ou personnelles,Instagram,Oui,2025-01-13,Masculin,18-25 ans,Juridique;Suppression,fr,Non,2025,1,Jeune adulte,1,0,1
+992,Autres,Instagram,Non,2025-01-14,Féminin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+993,Autres,Instagram,Non,2025-01-15,Féminin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+994,Autres,Instagram,Non,2025-01-16,Féminin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+995,Autres,Instagram,Non,2025-01-17,Féminin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+996,Propos de haine,Instagram,Non,2025-01-18,Masculin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+997,Propos raciste ou discriminatoire,Instagram,Non,2025-01-19,Masculin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+998,Usurpation d’identité,Facebook,Non,2025-01-20,Féminin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+999,Publication de photos intimes ou personnelles,WhatsApp,Non,2025-01-21,Féminin,+26 ans,Suppression,fr,Oui,2025,1,Adulte,0,0,1
+1000,Diffamation,Facebook,Non,2025-01-22,Féminin,+26 ans,Suppression,ar,Oui,2025,1,Adulte,0,0,1
+1001,Publication de photos intimes ou personnelles,Facebook,Non,2025-01-23,Masculin,+26 ans,Suppression,ar,Oui,2025,1,Adulte,0,0,1
+1002,Autres,Instagram,Oui,2025-01-24,Féminin,+26 ans,Juridique;Psychique;Suppression,fr,Non,2025,1,Adulte,1,1,1
+1003,Publication de photos intimes ou personnelles,Tiktok,Non,2025-01-25,Féminin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+1004,Diffamation,Facebook,Non,2025-01-26,Féminin,18-25 ans,Suppression,ar,Oui,2025,1,Jeune adulte,0,0,1
+1005,Diffamation,Tiktok,Non,2025-01-27,Féminin,18-25 ans,Suppression,ar,Oui,2025,1,Jeune adulte,0,0,1
+1006,Autres,Instagram,Oui,2025-01-28,Féminin,+26 ans,Juridique;Psychique;Suppression,fr,Non,2025,1,Adulte,1,1,1
+1007,Diffamation,Tiktok,Non,2025-01-29,Féminin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+1008,Publication de photos intimes ou personnelles,Tiktok,Non,2025-01-30,Féminin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+1009,Publication de photos intimes ou personnelles,Tiktok,Non,2025-01-31,Féminin,18-25 ans,Suppression,fr,Oui,2025,1,Jeune adulte,0,0,1
+1010,Publication de photos intimes ou personnelles,Tiktok,Non,2025-02-01,Féminin,18-25 ans,Suppression,fr,Oui,2025,2,Jeune adulte,0,0,1
+1011,Publication de photos intimes ou personnelles,Tiktok,Non,2025-02-02,Féminin,18-25 ans,Suppression,fr,Oui,2025,2,Jeune adulte,0,0,1
+1012,Publication de photos intimes ou personnelles,Tiktok,Non,2025-02-03,Féminin,18-25 ans,Suppression,fr,Oui,2025,2,Jeune adulte,0,0,1
+1013,Publication de photos intimes ou personnelles,Tiktok,Non,2025-02-04,Féminin,18-25 ans,Suppression,fr,Oui,2025,2,Jeune adulte,0,0,1
+1014,Autres,Instagram,Oui,2025-02-05,Féminin,+26 ans,Juridique;Psychique;Suppression,fr,Non,2025,2,Adulte,1,1,1
+1015,Autres,Tiktok,Non,2025-02-06,Féminin,18-25 ans,Suppression,fr,Oui,2025,2,Jeune adulte,0,0,1
+1016,Autres,Facebook,Oui,2025-02-07,Féminin,18-25 ans,Psychique;Suppression,ar,Non,2025,2,Jeune adulte,0,1,1
+1017,Propos de haine,Instagram,Oui,2025-02-08,Masculin,18-25 ans,Juridique;Psychique;Suppression,fr,Non,2025,2,Jeune adulte,1,1,1
+1018,Autres,Facebook,Non,2025-02-09,Féminin,+26 ans,Suppression,fr,Oui,2025,2,Adulte,0,0,1
+1019,Propos de haine,Facebook,Non,2025-02-10,Féminin,+26 ans,Suppression,ar,Oui,2025,2,Adulte,0,0,1
+1020,Autres,Facebook,Non,2025-02-11,Féminin,+26 ans,Suppression,fr,Oui,2025,2,Adulte,0,0,1
+1021,Menace de publier des photos intimes ou personnelles,WhatsApp,Oui,2025-02-12,Féminin,18-25 ans,Juridique;Psychique;Suppression,ar,Non,2025,2,Jeune adulte,1,1,1
+1022,Menace de publier des photos intimes ou personnelles,WhatsApp,Oui,2025-02-13,Féminin,+26 ans,Juridique;Psychique;Suppression,fr,Non,2025,2,Adulte,1,1,1
+1023,Autres,Instagram,Non,2025-02-14,Masculin,+26 ans,Suppression,fr,Oui,2025,2,Adulte,0,0,1
+1024,Publication de photos intimes ou personnelles,Instagram,Non,2025-02-15,Masculin,+26 ans,Suppression,fr,Oui,2025,2,Adulte,0,0,1
+1025,Publication de photos intimes ou personnelles,Facebook,Non,2025-02-16,Masculin,+26 ans,Suppression,fr,Oui,2025,2,Adulte,0,0,1
+1026,Autres,WhatsApp,Oui,2025-02-17,Féminin,+26 ans,Juridique;Suppression,fr,Non,2025,2,Adulte,1,0,1
+1027,Autres,Facebook,Non,2025-02-18,Féminin,+26 ans,Suppression,fr,Oui,2025,2,Adulte,0,0,1
+1028,Propos de haine,Facebook,Non,2025-02-19,Masculin,+26 ans,Suppression,fr,Oui,2025,2,Adulte,0,0,1
+1029,Menace de publier des photos intimes ou personnelles,WhatsApp,Oui,2025-02-20,Féminin,+26 ans,Juridique;Psychique;Suppression,fr,Non,2025,2,Adulte,1,1,1
+1030,Propos de haine,Tiktok,Non,2025-02-21,Masculin,+26 ans,Suppression,fr,Oui,2025,2,Adulte,0,0,1
+1031,Publication de photos intimes ou personnelles,Facebook,Non,2025-02-22,Féminin,18-25 ans,Suppression,fr,Oui,2025,2,Jeune adulte,0,0,1
+1032,Autres,Instagram,Non,2025-02-23,Masculin,18-25 ans,Suppression,ar,Oui,2025,2,Jeune adulte,0,0,1
+1033,Propos de haine,Instagram,Non,2025-02-24,Féminin,18-25 ans,Suppression,fr,Oui,2025,2,Jeune adulte,0,0,1
+1034,Publication de photos intimes ou personnelles,WhatsApp,Non,2025-02-25,Féminin,18-25 ans,Suppression,fr,Oui,2025,2,Jeune adulte,0,0,1
+1035,Propos de haine,WhatsApp,Oui,2025-02-26,Féminin,18-25 ans,Juridique;Suppression,fr,Non,2025,2,Jeune adulte,1,0,1
+1036,Propos de haine,Tiktok,Non,2025-02-27,Féminin,18-25 ans,Suppression,ar,Oui,2025,2,Jeune adulte,0,0,1
+1037,Autres,WhatsApp,Non,2025-03-02,Féminin,18-25 ans,Suppression,fr,Oui,2025,3,Jeune adulte,0,0,1
+1038,Publication de photos intimes ou personnelles,Instagram,Oui,2025-03-03,Masculin,+26 ans,Juridique;Suppression,fr,Non,2025,3,Adulte,1,0,1
+1039,Autres,Tiktok,Non,2025-03-04,Féminin,+26 ans,Suppression,fr,Oui,2025,3,Adulte,0,0,1
+1040,Diffamation,Tiktok,Non,2025-03-05,Féminin,+26 ans,Suppression,fr,Oui,2025,3,Adulte,0,0,1
+1041,Propos raciste ou discriminatoire,Tiktok,Non,2025-03-06,Masculin,+26 ans,Suppression,fr,Oui,2025,3,Adulte,0,0,1
+1042,Publication de photos intimes ou personnelles,WhatsApp,Non,2025-03-07,Féminin,+26 ans,Suppression,fr,Oui,2025,3,Adulte,0,0,1
+1351,Publication de photos intimes ou personnelles,WhatsApp,Non,2025-11-16,Masculin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1352,Diffamation,Tiktok,Non,2025-11-17,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1353,Publication de photos intimes ou personnelles,Tiktok,Non,2025-11-18,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1354,Diffamation,Tiktok,Non,2025-11-19,Masculin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1355,Propos de haine,Facebook,Oui,2025-11-20,Féminin,18-25 ans,Juridique;Suppression,fr,Non,2025,11,Jeune adulte,1,0,1
+1356,Autres,WhatsApp,Non,2025-11-21,Masculin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1357,Diffamation,Tiktok,Non,2025-11-22,Masculin,+26 ans,Suppression,ar,Oui,2025,11,Adulte,0,0,1
+1358,Autres,Facebook,Non,2025-11-23,Féminin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1359,Autres,Tiktok,Non,2025-11-24,Féminin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1360,Autres,WhatsApp,Non,2025-11-25,Féminin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1361,Autres,WhatsApp,Non,2025-11-26,Féminin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1362,Propos de haine,WhatsApp,Oui,2025-11-27,Féminin,18-25 ans,Juridique;Suppression,ar,Non,2025,11,Jeune adulte,1,0,1
+1363,Autres,Facebook,Oui,2025-11-28,Masculin,18-25 ans,Juridique;Suppression,ar,Non,2025,11,Jeune adulte,1,0,1
+1364,Autres,WhatsApp,Non,2025-11-29,Masculin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1365,Autres,WhatsApp,Non,2025-11-30,Masculin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1366,Autres,WhatsApp,Oui,2025-11-01,Masculin,+26 ans,Juridique;Psychique;Suppression,ar,Non,2025,11,Adulte,1,1,1
+1367,Autres,Facebook,Oui,2025-11-02,Masculin,18-25 ans,Juridique;Suppression,ar,Non,2025,11,Jeune adulte,1,0,1
+1368,Diffamation,Instagram,Non,2025-11-03,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1369,Propos raciste ou discriminatoire,Tiktok,Non,2025-11-04,Féminin,+26 ans,Suppression,ar,Oui,2025,11,Adulte,0,0,1
+1370,Publication de photos intimes ou personnelles,Tiktok,Non,2025-11-05,Féminin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1371,Autres,WhatsApp,Oui,2025-11-06,Masculin,+26 ans,Juridique;Suppression,ar,Non,2025,11,Adulte,1,0,1
+1372,Autres,Instagram,Non,2025-11-07,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1373,Autres,Facebook,Non,2025-11-08,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1374,Autres,WhatsApp,Oui,2025-11-09,Masculin,+26 ans,Juridique;Suppression,fr,Non,2025,11,Adulte,1,0,1
+1375,Publication de photos intimes ou personnelles,Instagram,Oui,2025-11-10,Féminin,18-25 ans,Psychique;Suppression,fr,Non,2025,11,Jeune adulte,0,1,1
+1376,Autres,Facebook,Non,2025-11-11,Masculin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1377,Autres,Instagram,Non,2025-11-12,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1378,Autres,Instagram,Non,2025-11-13,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1379,Autres,Facebook,Non,2025-11-14,Masculin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1380,Publication de photos intimes ou personnelles,Instagram,Oui,2025-11-15,Féminin,18-25 ans,Psychique;Suppression,fr,Non,2025,11,Jeune adulte,0,1,1
+1381,Autres,WhatsApp,Non,2025-11-16,Féminin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1382,Autres,Instagram,Non,2025-11-17,Masculin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1383,Escroquerie,Tiktok,Non,2025-11-18,Masculin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1384,Propos raciste ou discriminatoire,Tiktok,Non,2025-11-19,Féminin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1385,Propos de haine,Instagram,Non,2025-11-20,Féminin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1386,Autres,WhatsApp,Non,2025-11-21,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1387,Autres,WhatsApp,Non,2025-11-22,Masculin,+26 ans,Suppression,ar,Oui,2025,11,Adulte,0,0,1
+1388,Autres,WhatsApp,Non,2025-11-23,Masculin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1389,Autres,WhatsApp,Non,2025-11-24,Masculin,+26 ans,Suppression,ar,Oui,2025,11,Adulte,0,0,1
+1390,Autres,WhatsApp,Non,2025-11-25,Masculin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1391,Autres,WhatsApp,Non,2025-11-26,Masculin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1392,Autres,Facebook,Non,2025-11-27,Masculin,+26 ans,Suppression,fr,Oui,2025,11,Adulte,0,0,1
+1393,Autres,WhatsApp,Oui,2025-11-28,Masculin,+26 ans,Juridique;Psychique;Suppression,ar,Non,2025,11,Adulte,1,1,1
+1394,Autres,WhatsApp,Non,2025-11-29,Féminin,18-25 ans,Suppression,ar,Oui,2025,11,Jeune adulte,0,0,1
+1395,Autres,WhatsApp,Oui,2025-11-30,Masculin,+26 ans,Juridique;Suppression,ar,Non,2025,11,Adulte,1,0,1
+1396,Publication de photos intimes ou personnelles,Instagram,Oui,2025-11-29,Féminin,+26 ans,Psychique;Suppression,fr,Non,2025,11,Adulte,0,1,1
+1397,Propos de haine,Instagram,Non,2025-11-30,Féminin,18-25 ans,Suppression,fr,Oui,2025,11,Jeune adulte,0,0,1
+1398,Publication de photos intimes ou personnelles,Facebook,Non,2025-12-01,Féminin,18-25 ans,Suppression,ar,Oui,2025,12,Jeune adulte,0,0,1
+1399,Publication de photos intimes ou personnelles,Facebook,Non,2025-12-02,Masculin,+26 ans,Suppression,ar,Oui,2025,12,Adulte,0,0,1
+1400,Publication de photos intimes ou personnelles,Instagram,Non,2025-12-03,Féminin,+26 ans,Suppression,fr,Oui,2025,12,Adulte,0,0,1
+1401,Publication de photos intimes ou personnelles,WhatsApp,Non,2025-12-04,Féminin,+26 ans,Suppression,fr,Oui,2025,12,Adulte,0,0,1
+1402,Publication de photos intimes ou personnelles,Tiktok,Non,2025-12-05,Féminin,18-25 ans,Suppression,fr,Oui,2025,12,Jeune adulte,0,0,1
+1403,Menace de publier des photos intimes ou personnelles,Facebook,Non,2025-12-06,Féminin,+26 ans,Suppression,ar,Oui,2025,12,Adulte,0,0,1
+1404,Propos de haine,Facebook,Non,2025-12-07,Masculin,+26 ans,Suppression,ar,Oui,2025,12,Adulte,0,0,1
+1405,Autres,Facebook,Oui,2025-12-08,Féminin,18-25 ans,Psychique;Suppression,ar,Non,2025,12,Jeune adulte,0,1,1
+1406,Propos de haine,Facebook,Non,2025-12-09,Féminin,18-25 ans,Suppression,ar,Oui,2025,12,Jeune adulte,0,0,1
+1407,Menace de publier des photos intimes ou personnelles,WhatsApp,Non,2025-12-10,Féminin,18-25 ans,Suppression,fr,Oui,2025,12,Jeune adulte,0,0,1
+1408,Menace de publier des photos intimes ou personnelles,WhatsApp,Non,2025-12-11,Féminin,18-25 ans,Suppression,fr,Oui,2025,12,Jeune adulte,0,0,1
+1409,Propos de haine,Instagram,Oui,2025-12-12,Féminin,+26 ans,Juridique;Suppression,ar,Non,2025,12,Adulte,1,0,1
+1410,Autres,Instagram,Non,2025-12-13,Féminin,18-25 ans,Suppression,ar,Oui,2025,12,Jeune adulte,0,0,1
+1411,Diffamation,Facebook,Oui,2025-12-14,Féminin,18-25 ans,Juridique;Suppression,ar,Non,2025,12,Jeune adulte,1,0,1
+1412,Menace de publier des photos intimes ou personnelles,WhatsApp,Non,2025-12-15,Masculin,18-25 ans,Suppression,ar,Oui,2025,12,Jeune adulte,0,0,1
+1413,Propos raciste ou discriminatoire,WhatsApp,Non,2025-12-16,Masculin,18-25 ans,Suppression,ar,Oui,2025,12,Jeune adulte,0,0,1
+1414,Publication de photos intimes ou personnelles,Facebook,Non,2025-12-17,Féminin,18-25 ans,Suppression,fr,Oui,2025,12,Jeune adulte,0,0,1
+1668,Menace de publier des photos intimes ou personnelles,WhatsApp,Non,2025-04-10,Féminin,Non renseigné,Suppression,ar,Oui,2025,4,Non renseigné,0,0,1
+1669,Propos de haine,Instagram,Non,2025-04-01,Féminin,Non renseigné,Suppression,fr,Oui,2025,4,Non renseigné,0,0,1
+1670,Menace de publier des photos intimes ou personnelles,Facebook,Non,2025-03-20,Non renseigné,Non renseigné,Suppression,ar,Oui,2025,3,Non renseigné,0,0,1
+1671,Menace de publier des photos intimes ou personnelles,Instagram,Oui,2025-03-12,Non renseigné,Non renseigné,Juridique,ar,Non,2025,3,Non renseigné,1,0,0
+1672,Propos de haine,Facebook,Oui,2025-03-08,Féminin,13-17 ans,Juridique,fr,Non,2025,3,Mineur,1,0,0
+1673,Publication de photos intimes ou personnelles,Instagram,Non,2025-02-24,Non renseigné,Non renseigné,Suppression,fr,Oui,2025,2,Non renseigné,0,0,1
+1674,Menace de publier des photos intimes ou personnelles,Facebook,Oui,2025-02-21,Masculin,Non renseigné,Juridique,ar,Non,2025,2,Non renseigné,1,0,0
+1675,Diffamation,Facebook,Non,2025-02-21,Féminin,Non renseigné,Suppression,fr,Non,2025,2,Non renseigné,0,0,1
+1676,Menace de publier des photos intimes ou personnelles,Facebook,Non,2025-02-16,Non renseigné,Non renseigné,Suppression,ar,Oui,2025,2,Non renseigné,0,0,1
+1677,Propos de haine,Facebook,Non,2025-01-22,Non renseigné,Non renseigné,Suppression,ar,Oui,2025,1,Non renseigné,0,0,1

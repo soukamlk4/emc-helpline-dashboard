@@ -1,0 +1,214 @@
+2026-08-31 13:09:00,629 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,654 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,663 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,667 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,671 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,674 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,676 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,682 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,684 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,688 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,691 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,695 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,695 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,700 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,701 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,707 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,710 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,714 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,714 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,719 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,722 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,725 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,729 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,732 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,735 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,738 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,738 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,747 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,754 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=1, age=0
+2026-08-31 13:09:00,758 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,762 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,767 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=1
+2026-08-31 13:09:00,768 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,774 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,778 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,781 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,785 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,791 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,795 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,797 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,803 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,809 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,811 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,816 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,819 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,825 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,827 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,831 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,836 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,841 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=1
+2026-08-31 13:09:00,844 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,846 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,854 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,859 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,860 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,868 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,872 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,877 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:00,877 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,887 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:00,895 | INFO     | src.silver.cleaner | Nettoyage de 5 lignes...
+2026-08-31 13:09:00,901 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:00,905 | INFO     | src.silver.cleaner | Nettoyage terminé : 5 lignes, 17 colonnes.
+2026-08-31 13:09:01,430 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : signalements.xlsx
+2026-08-31 13:09:01,480 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\AppData\Local\Temp\pytest-of-Ce Pc\pytest-0\test_import_fichier_valide0\signalements.xlsx
+2026-08-31 13:09:01,489 | INFO     | src.bronze.extractor | 3 lignes extraites, 12 colonnes.
+2026-08-31 13:09:01,489 | INFO     | src.silver.cleaner | Nettoyage de 3 lignes...
+2026-08-31 13:09:01,493 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:01,493 | INFO     | src.silver.cleaner | Nettoyage terminé : 3 lignes, 17 colonnes.
+2026-08-31 13:09:01,493 | INFO     | src.silver.validator | Validation de 3 lignes...
+2026-08-31 13:09:01,500 | INFO     | src.silver.validator | Validation terminée : 3 valides, 0 rejetées.
+2026-08-31 13:09:01,521 | INFO     | src.gold.star_schema_builder | Début du chargement de 3 lignes validées...
+2026-08-31 13:09:01,556 | INFO     | src.gold.star_schema_builder | Chargement réussi : 3 insérées, 0 déjà présentes.
+2026-08-31 13:09:01,556 | INFO     | src.ingestion.file_ingestion | Ingestion réussie pour signalements.xlsx : {'lues': 3, 'inserees': 3, 'ignorees': 0, 'rejetees': 0}
+2026-08-31 13:09:01,770 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : vide.xlsx
+2026-08-31 13:09:01,819 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\AppData\Local\Temp\pytest-of-Ce Pc\pytest-0\test_import_fichier_vide0\vide.xlsx
+2026-08-31 13:09:01,826 | INFO     | src.bronze.extractor | 0 lignes extraites, 12 colonnes.
+2026-08-31 13:09:01,826 | WARNING  | src.ingestion.file_ingestion | Fichier vide, aucune ligne à importer.
+2026-08-31 13:09:01,958 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : invalide.xlsx
+2026-08-31 13:09:02,019 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\AppData\Local\Temp\pytest-of-Ce Pc\pytest-0\test_import_mauvais_format0\invalide.xlsx
+2026-08-31 13:09:02,019 | ERROR    | src.ingestion.file_ingestion | Échec de l'extraction : Excel file format cannot be determined, you must specify an engine manually.
+2026-08-31 13:09:02,192 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : signalements.xlsx
+2026-08-31 13:09:02,246 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\AppData\Local\Temp\pytest-of-Ce Pc\pytest-0\test_fichier_deja_importe_est_0\signalements.xlsx
+2026-08-31 13:09:02,259 | INFO     | src.bronze.extractor | 3 lignes extraites, 12 colonnes.
+2026-08-31 13:09:02,259 | INFO     | src.silver.cleaner | Nettoyage de 3 lignes...
+2026-08-31 13:09:02,265 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:02,269 | INFO     | src.silver.cleaner | Nettoyage terminé : 3 lignes, 17 colonnes.
+2026-08-31 13:09:02,269 | INFO     | src.silver.validator | Validation de 3 lignes...
+2026-08-31 13:09:02,275 | INFO     | src.silver.validator | Validation terminée : 3 valides, 0 rejetées.
+2026-08-31 13:09:02,300 | INFO     | src.gold.star_schema_builder | Début du chargement de 3 lignes validées...
+2026-08-31 13:09:02,362 | INFO     | src.gold.star_schema_builder | Chargement réussi : 3 insérées, 0 déjà présentes.
+2026-08-31 13:09:02,362 | INFO     | src.ingestion.file_ingestion | Ingestion réussie pour signalements.xlsx : {'lues': 3, 'inserees': 3, 'ignorees': 0, 'rejetees': 0}
+2026-08-31 13:09:02,362 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : signalements.xlsx
+2026-08-31 13:09:02,393 | WARNING  | src.ingestion.file_ingestion | Fichier déjà importé (hash identique) : signalements.xlsx
+2026-08-31 13:09:02,649 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : a.xlsx
+2026-08-31 13:09:02,692 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\AppData\Local\Temp\pytest-of-Ce Pc\pytest-0\test_import_incremental_deux_f0\a.xlsx
+2026-08-31 13:09:02,709 | INFO     | src.bronze.extractor | 3 lignes extraites, 12 colonnes.
+2026-08-31 13:09:02,709 | INFO     | src.silver.cleaner | Nettoyage de 3 lignes...
+2026-08-31 13:09:02,719 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:02,725 | INFO     | src.silver.cleaner | Nettoyage terminé : 3 lignes, 17 colonnes.
+2026-08-31 13:09:02,725 | INFO     | src.silver.validator | Validation de 3 lignes...
+2026-08-31 13:09:02,731 | INFO     | src.silver.validator | Validation terminée : 3 valides, 0 rejetées.
+2026-08-31 13:09:02,770 | INFO     | src.gold.star_schema_builder | Début du chargement de 3 lignes validées...
+2026-08-31 13:09:02,817 | INFO     | src.gold.star_schema_builder | Chargement réussi : 3 insérées, 0 déjà présentes.
+2026-08-31 13:09:02,817 | INFO     | src.ingestion.file_ingestion | Ingestion réussie pour a.xlsx : {'lues': 3, 'inserees': 3, 'ignorees': 0, 'rejetees': 0}
+2026-08-31 13:09:02,817 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : b.xlsx
+2026-08-31 13:09:02,882 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\AppData\Local\Temp\pytest-of-Ce Pc\pytest-0\test_import_incremental_deux_f0\b.xlsx
+2026-08-31 13:09:02,885 | INFO     | src.bronze.extractor | 2 lignes extraites, 12 colonnes.
+2026-08-31 13:09:02,892 | INFO     | src.silver.cleaner | Nettoyage de 2 lignes...
+2026-08-31 13:09:02,895 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:02,897 | INFO     | src.silver.cleaner | Nettoyage terminé : 2 lignes, 17 colonnes.
+2026-08-31 13:09:02,897 | INFO     | src.silver.validator | Validation de 2 lignes...
+2026-08-31 13:09:02,897 | INFO     | src.silver.validator | Validation terminée : 2 valides, 0 rejetées.
+2026-08-31 13:09:02,917 | INFO     | src.gold.star_schema_builder | Début du chargement de 2 lignes validées...
+2026-08-31 13:09:02,937 | INFO     | src.gold.star_schema_builder | Chargement réussi : 2 insérées, 0 déjà présentes.
+2026-08-31 13:09:02,937 | INFO     | src.ingestion.file_ingestion | Ingestion réussie pour b.xlsx : {'lues': 2, 'inserees': 2, 'ignorees': 0, 'rejetees': 0}
+2026-08-31 13:09:03,178 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : mixte.xlsx
+2026-08-31 13:09:03,233 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\AppData\Local\Temp\pytest-of-Ce Pc\pytest-0\test_donnees_partiellement_inv0\mixte.xlsx
+2026-08-31 13:09:03,245 | INFO     | src.bronze.extractor | 2 lignes extraites, 12 colonnes.
+2026-08-31 13:09:03,245 | INFO     | src.silver.cleaner | Nettoyage de 2 lignes...
+2026-08-31 13:09:03,252 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,257 | INFO     | src.silver.cleaner | Nettoyage terminé : 2 lignes, 17 colonnes.
+2026-08-31 13:09:03,257 | INFO     | src.silver.validator | Validation de 2 lignes...
+2026-08-31 13:09:03,260 | INFO     | src.silver.validator | Validation terminée : 1 valides, 1 rejetées.
+2026-08-31 13:09:03,262 | WARNING  | src.silver.validator | Ligne id=2 rejetée : plateforme manquante
+2026-08-31 13:09:03,296 | INFO     | src.gold.star_schema_builder | Début du chargement de 1 lignes validées...
+2026-08-31 13:09:03,318 | INFO     | src.gold.star_schema_builder | Chargement réussi : 1 insérées, 0 déjà présentes.
+2026-08-31 13:09:03,320 | INFO     | src.ingestion.file_ingestion | Ingestion réussie pour mixte.xlsx : {'lues': 2, 'inserees': 1, 'ignorees': 0, 'rejetees': 1}
+2026-08-31 13:09:03,491 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : pas.xlsx
+2026-08-31 13:09:03,498 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,509 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,512 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,513 | INFO     | src.silver.validator | Validation de 1 lignes...
+2026-08-31 13:09:03,520 | INFO     | src.silver.validator | Validation terminée : 1 valides, 0 rejetées.
+2026-08-31 13:09:03,523 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,531 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,536 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,536 | INFO     | src.silver.validator | Validation de 1 lignes...
+2026-08-31 13:09:03,536 | INFO     | src.silver.validator | Validation terminée : 0 valides, 1 rejetées.
+2026-08-31 13:09:03,546 | WARNING  | src.silver.validator | Ligne id=nan rejetée : id manquant
+2026-08-31 13:09:03,548 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,566 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,566 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,566 | INFO     | src.silver.validator | Validation de 1 lignes...
+2026-08-31 13:09:03,566 | INFO     | src.silver.validator | Validation terminée : 0 valides, 1 rejetées.
+2026-08-31 13:09:03,574 | WARNING  | src.silver.validator | Ligne id=1 rejetée : date invalide ou manquante
+2026-08-31 13:09:03,574 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,582 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,586 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,586 | INFO     | src.silver.validator | Validation de 1 lignes...
+2026-08-31 13:09:03,591 | INFO     | src.silver.validator | Validation terminée : 0 valides, 1 rejetées.
+2026-08-31 13:09:03,593 | WARNING  | src.silver.validator | Ligne id=1 rejetée : plateforme manquante
+2026-08-31 13:09:03,597 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,602 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,606 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,606 | INFO     | src.silver.validator | Validation de 1 lignes...
+2026-08-31 13:09:03,610 | INFO     | src.silver.validator | Validation terminée : 0 valides, 1 rejetées.
+2026-08-31 13:09:03,610 | WARNING  | src.silver.validator | Ligne id=1 rejetée : type de cyberviolence manquant
+2026-08-31 13:09:03,615 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,623 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=1, age=0
+2026-08-31 13:09:03,626 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,626 | INFO     | src.silver.validator | Validation de 1 lignes...
+2026-08-31 13:09:03,630 | INFO     | src.silver.validator | Validation terminée : 1 valides, 0 rejetées.
+2026-08-31 13:09:03,634 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,638 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,641 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,643 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,647 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,650 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,650 | INFO     | src.silver.validator | Validation de 2 lignes...
+2026-08-31 13:09:03,653 | INFO     | src.silver.validator | Validation terminée : 1 valides, 1 rejetées.
+2026-08-31 13:09:03,653 | WARNING  | src.silver.validator | Ligne id=2 rejetée : plateforme manquante
+2026-08-31 13:09:03,653 | INFO     | src.silver.cleaner | Nettoyage de 1 lignes...
+2026-08-31 13:09:03,662 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=0, age=0
+2026-08-31 13:09:03,667 | INFO     | src.silver.cleaner | Nettoyage terminé : 1 lignes, 17 colonnes.
+2026-08-31 13:09:03,667 | INFO     | src.silver.validator | Validation de 1 lignes...
+2026-08-31 13:09:03,670 | INFO     | src.silver.validator | Validation terminée : 1 valides, 0 rejetées.
+2026-08-31 13:09:22,723 | INFO     | __main__ | === Démarrage du pipeline ETL pour data/bronze/signalements.xlsx ===
+2026-08-31 13:09:22,723 | INFO     | src.bronze.extractor | Extraction du fichier : data/bronze/signalements.xlsx
+2026-08-31 13:09:23,082 | INFO     | src.bronze.extractor | 138 lignes extraites, 12 colonnes.
+2026-08-31 13:09:23,082 | INFO     | src.silver.cleaner | Nettoyage de 138 lignes...
+2026-08-31 13:09:23,086 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=5, age=9
+2026-08-31 13:09:23,097 | INFO     | src.silver.cleaner | Nettoyage terminé : 138 lignes, 17 colonnes.
+2026-08-31 13:09:23,097 | INFO     | src.silver.validator | Validation de 138 lignes...
+2026-08-31 13:09:23,105 | INFO     | src.silver.validator | Validation terminée : 138 valides, 0 rejetées.
+2026-08-31 13:09:23,138 | INFO     | src.gold.star_schema_builder | Début du chargement de 138 lignes validées...
+2026-08-31 13:09:23,910 | INFO     | src.gold.star_schema_builder | Chargement réussi : 138 insérées, 0 déjà présentes.
+2026-08-31 13:09:23,910 | INFO     | __main__ | === Pipeline terminé : {'lues': 138, 'inserees': 138, 'ignorees': 0, 'rejetees': 0} ===
+2026-08-31 13:10:57,619 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : tmpgk53a6gb.xlsx
+2026-08-31 13:10:57,692 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\Desktop\cmrpi\emc_helpline_data_platform\data\bronze\20260831_131057_tmpgk53a6gb.xlsx
+2026-08-31 13:10:57,998 | INFO     | src.bronze.extractor | 138 lignes extraites, 12 colonnes.
+2026-08-31 13:10:57,998 | INFO     | src.silver.cleaner | Nettoyage de 138 lignes...
+2026-08-31 13:10:58,027 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=5, age=9
+2026-08-31 13:10:58,042 | INFO     | src.silver.cleaner | Nettoyage terminé : 138 lignes, 17 colonnes.
+2026-08-31 13:10:58,043 | INFO     | src.silver.validator | Validation de 138 lignes...
+2026-08-31 13:10:58,056 | INFO     | src.silver.validator | Validation terminée : 138 valides, 0 rejetées.
+2026-08-31 13:10:58,084 | INFO     | src.gold.star_schema_builder | Début du chargement de 138 lignes validées...
+2026-08-31 13:10:58,907 | INFO     | src.gold.star_schema_builder | Chargement réussi : 0 insérées, 138 déjà présentes.
+2026-08-31 13:10:58,909 | INFO     | src.ingestion.file_ingestion | Ingestion réussie pour tmpgk53a6gb.xlsx : {'lues': 138, 'inserees': 0, 'ignorees': 138, 'rejetees': 0}
+2026-08-31 13:12:59,531 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : tmp6j5i3ivo.xlsx
+2026-08-31 13:12:59,595 | WARNING  | src.ingestion.file_ingestion | Fichier déjà importé (hash identique) : tmp6j5i3ivo.xlsx
+2026-08-31 19:47:25,755 | INFO     | src.ingestion.file_ingestion | Ingestion demandée : tmpvoili2cd.xlsx
+2026-08-31 19:47:25,837 | INFO     | src.bronze.extractor | Extraction du fichier : C:\Users\Ce Pc\Desktop\cmrpi\emc_helpline_data_platform\data\bronze\20260831_194725_tmpvoili2cd.xlsx
+2026-08-31 19:47:25,861 | INFO     | src.bronze.extractor | 22 lignes extraites, 12 colonnes.
+2026-08-31 19:47:25,861 | INFO     | src.silver.cleaner | Nettoyage de 22 lignes...
+2026-08-31 19:47:25,884 | INFO     | src.silver.cleaner | Valeurs manquantes remplacées : genre=8, age=5
+2026-08-31 19:47:25,893 | INFO     | src.silver.cleaner | Nettoyage terminé : 22 lignes, 17 colonnes.
+2026-08-31 19:47:25,893 | INFO     | src.silver.validator | Validation de 22 lignes...
+2026-08-31 19:47:25,900 | INFO     | src.silver.validator | Validation terminée : 20 valides, 2 rejetées.
+2026-08-31 19:47:25,910 | WARNING  | src.silver.validator | Ligne id=9020 rejetée : plateforme manquante
+2026-08-31 19:47:25,911 | WARNING  | src.silver.validator | Ligne id=9021 rejetée : date invalide ou manquante
+2026-08-31 19:47:25,945 | INFO     | src.gold.star_schema_builder | Début du chargement de 20 lignes validées...
+2026-08-31 19:47:26,128 | INFO     | src.gold.star_schema_builder | Chargement réussi : 20 insérées, 0 déjà présentes.
+2026-08-31 19:47:26,128 | INFO     | src.ingestion.file_ingestion | Ingestion réussie pour tmpvoili2cd.xlsx : {'lues': 22, 'inserees': 20, 'ignorees': 0, 'rejetees': 2}

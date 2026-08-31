@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: emc_helpline_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: emc_helpline
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: soukaina2004
+    ports:
+      - "5432:5432"
+    volumes:
+      - emc_pgdata:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      # init.sql est exécuté automatiquement à la toute première création du volume
+
+volumes:
+  emc_pgdata:
