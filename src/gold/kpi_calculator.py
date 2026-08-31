@@ -1,207 +1,242 @@
 """
 KPI calculator — couche Gold.
-Recalcule les 8 KPI depuis PostgreSQL, avec filtres optionnels
-(période, plateforme). Fournit aussi l'historique des imports pour le
-dashboard.
+Version simplifiée pour Streamlit Cloud : lit les données depuis le CSV
+(au lieu de PostgreSQL).
 """
 
 import warnings
-
 import pandas as pd
-import psycopg2
+import streamlit as st
+from pathlib import Path
 
-from src.utils.config import DB_CONFIG
-from src.utils.logger import get_logger
-
-logger = get_logger(__name__)
 warnings.filterwarnings("ignore", message="pandas only supports SQLAlchemy")
 
+# ================================================================
+# CHARGEMENT DES DONNÉES
+# ================================================================
 
-def _query(sql: str, params: list = None) -> pd.DataFrame:
-    conn = psycopg2.connect(**DB_CONFIG)
-    try:
-        df = pd.read_sql_query(sql, conn, params=params or [])
-    finally:
-        conn.close()
-    return df
+@st.cache_data
+def load_data():
+    """Charge les données depuis le fichier CSV."""
+    possible_paths = [
+        Path('data/silver/signalements_clean.csv'),
+        Path('../data/silver/signalements_clean.csv'),
+        Path('/mount/src/emc-helpline-dashboard/data/silver/signalements_clean.csv'),
+        Path('emc_helpline_data_platform/data/silver/signalements_clean.csv'),
+    ]
+    
+    for path in possible_paths:
+        if path.exists():
+            df = pd.read_csv(path)
+            df['date'] = pd.to_datetime(df['date'])
+            return df
+    
+    # Fallback : essayer de trouver n'importe quel CSV
+    for path in Path('.').rglob('signalements_clean.csv'):
+        if path.exists():
+            df = pd.read_csv(path)
+            df['date'] = pd.to_datetime(df['date'])
+            return df
+    
+    st.error("❌ Fichier de données non trouvé !")
+    return pd.DataFrame()
+
+# Chargement global
+df_global = load_data()
+
+# ================================================================
+# FONCTIONS DE FILTRAGE
+# ================================================================
+
+def appliquer_filtres(df, filtres):
+    """Applique les filtres sur le DataFrame."""
+    if df is None or df.empty:
+        return df
+    
+    df_filtre = df.copy()
+    
+    if 'date_debut' in filtres and filtres['date_debut']:
+        df_filtre = df_filtre[df_filtre['date'] >= pd.to_datetime(filtres['date_debut'])]
+    if 'date_fin' in filtres and filtres['date_fin']:
+        df_filtre = df_filtre[df_filtre['date'] <= pd.to_datetime(filtres['date_fin'])]
+    if 'plateforme' in filtres and filtres['plateforme']:
+        df_filtre = df_filtre[df_filtre['plateforme'].isin(filtres['plateforme'])]
+    if 'type_cyberviolence' in filtres and filtres['type_cyberviolence']:
+        df_filtre = df_filtre[df_filtre['cyberharcelementType'].isin(filtres['type_cyberviolence'])]
+    
+    return df_filtre
 
 
-def _clause_filtre(date_debut=None, date_fin=None, plateforme=None, type_cyberviolence=None):
-    conditions = []
-    params = []
-    if date_debut:
-        conditions.append("d.date_complete >= %s")
-        params.append(date_debut)
-    if date_fin:
-        conditions.append("d.date_complete <= %s")
-        params.append(date_fin)
-    if plateforme:
-        conditions.append("p.plateforme = ANY(%s)")
-        params.append(list(plateforme))
-    if type_cyberviolence:
-        conditions.append("t.type_cyberviolence = ANY(%s)")
-        params.append(list(type_cyberviolence))
-    where_sql = f"WHERE {' AND '.join(conditions)}" if conditions else ""
-    return where_sql, params
-
-
-def _ajouter_pourcentage(df: pd.DataFrame, colonne_nb: str = "nb") -> pd.DataFrame:
+def _ajouter_pourcentage(df, colonne_nb="nb"):
+    """Ajoute une colonne de pourcentage."""
     total = df[colonne_nb].sum()
     df["pct"] = (df[colonne_nb] / total * 100).round(1) if total > 0 else 0.0
     return df
 
+# ================================================================
+# KPI 1 à 8
+# ================================================================
 
-def _base_joins(besoin_type=False):
-    joins = "JOIN dim_date d ON f.date_id = d.date_id JOIN dim_plateforme p ON f.plateforme_id = p.plateforme_id"
-    if besoin_type:
-        joins += " JOIN dim_type_cyberviolence t ON f.type_id = t.type_id"
-    return joins
-
-
-def _requete_dimension(table_dim, id_col, label_cols, date_debut=None, date_fin=None,
-                        plateforme=None, type_cyberviolence=None) -> pd.DataFrame:
-    where_sql, params = _clause_filtre(date_debut, date_fin, plateforme, type_cyberviolence)
-    besoin_type = type_cyberviolence is not None
-    sql = f"""
-        SELECT {label_cols}, count(*) AS nb
-        FROM faits_signalements f
-        JOIN {table_dim} dim ON f.{id_col} = dim.{id_col}
-        {_base_joins(besoin_type)}
-        {where_sql}
-        GROUP BY {label_cols}
-        ORDER BY nb DESC;
-    """
-    return _ajouter_pourcentage(_query(sql, params))
+def total_signalements(**filtres):
+    """Total des signalements."""
+    df = appliquer_filtres(df_global, filtres)
+    return len(df) if not df.empty else 0
 
 
-def kpi1_volume_mensuel(date_debut=None, date_fin=None, plateforme=None,
-                         type_cyberviolence=None) -> pd.DataFrame:
-    where_sql, params = _clause_filtre(date_debut, date_fin, plateforme, type_cyberviolence)
-    besoin_type = type_cyberviolence is not None
-    sql = f"""
-        SELECT d.annee, d.mois, d.nom_mois, count(*) AS nb_signalements
-        FROM faits_signalements f
-        {_base_joins(besoin_type)}
-        {where_sql}
-        GROUP BY d.annee, d.mois, d.nom_mois
-        ORDER BY d.annee, d.mois;
-    """
-    return _query(sql, params)
+def kpi1_volume_mensuel(**filtres):
+    """KPI 1 : Évolution mensuelle."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    df['mois'] = df['date'].dt.month
+    df['annee'] = df['date'].dt.year
+    result = df.groupby(['annee', 'mois']).size().reset_index(name='nb_signalements')
+    result['nom_mois'] = pd.to_datetime(result['mois'].astype(str) + '-01').dt.strftime('%B')
+    return result.sort_values(['annee', 'mois'])
 
 
-def kpi2_repartition_genre(date_debut=None, date_fin=None, plateforme=None,
-                            type_cyberviolence=None) -> pd.DataFrame:
-    return _requete_dimension("dim_genre", "genre_id", "dim.genre",
-                               date_debut, date_fin, plateforme, type_cyberviolence)
+def kpi2_repartition_genre(**filtres):
+    """KPI 2 : Répartition par genre."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    result = df['genre'].value_counts().reset_index()
+    result.columns = ['genre', 'nb']
+    return _ajouter_pourcentage(result)
 
 
-def kpi3_repartition_age(date_debut=None, date_fin=None, plateforme=None,
-                          type_cyberviolence=None) -> pd.DataFrame:
-    return _requete_dimension("dim_age", "age_id", "dim.tranche_age, dim.statut_age",
-                               date_debut, date_fin, plateforme, type_cyberviolence)
+def kpi3_repartition_age(**filtres):
+    """KPI 3 : Répartition par tranche d'âge."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    # Nettoyer les libellés
+    age_mapping = {
+        'Âges de 18 à 25 ans': '18-25 ans',
+        'Âges de 26 ans et plus': '+26 ans',
+        'Âges de 13 à 17 ans': '13-17 ans',
+        'Âges de 5 à 12 ans': '5-12 ans'
+    }
+    df['tranche_age'] = df['age'].replace(age_mapping).fillna('Non renseigné')
+    
+    result = df['tranche_age'].value_counts().reset_index()
+    result.columns = ['tranche_age', 'nb']
+    return _ajouter_pourcentage(result)
 
 
-def kpi4_typologie(date_debut=None, date_fin=None, plateforme=None) -> pd.DataFrame:
-    return _requete_dimension("dim_type_cyberviolence", "type_id", "dim.type_cyberviolence",
-                               date_debut, date_fin, plateforme)
+def kpi4_typologie(**filtres):
+    """KPI 4 : Typologie des cyberviolences."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    result = df['cyberharcelementType'].value_counts().reset_index()
+    result.columns = ['type_cyberviolence', 'nb']
+    return _ajouter_pourcentage(result)
 
 
-def kpi5_plateforme(date_debut=None, date_fin=None, plateforme=None,
-                     type_cyberviolence=None) -> pd.DataFrame:
-    return _requete_dimension("dim_plateforme", "plateforme_id", "dim.plateforme",
-                               date_debut, date_fin, plateforme, type_cyberviolence)
+def kpi5_plateforme(**filtres):
+    """KPI 5 : Répartition par plateforme."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    result = df['plateforme'].value_counts().reset_index()
+    result.columns = ['plateforme', 'nb']
+    return _ajouter_pourcentage(result)
 
 
-def kpi6_accompagnement(date_debut=None, date_fin=None, plateforme=None,
-                         type_cyberviolence=None) -> pd.DataFrame:
-    return _requete_dimension("dim_accompagnement", "accomp_id", "dim.accompagnement",
-                               date_debut, date_fin, plateforme, type_cyberviolence)
+def kpi6_accompagnement(**filtres):
+    """KPI 6 : Taux d'accompagnement."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    result = df['accompagnement'].value_counts().reset_index()
+    result.columns = ['accompagnement', 'nb']
+    return _ajouter_pourcentage(result)
 
 
-def kpi6b_type_accompagnement(date_debut=None, date_fin=None, plateforme=None) -> pd.DataFrame:
-    where_sql, params = _clause_filtre(date_debut, date_fin, plateforme)
-    sql = f"""
-        SELECT
-            sum(CASE WHEN ac.accomp_juridique THEN 1 ELSE 0 END) AS nb_juridique,
-            sum(CASE WHEN ac.accomp_psychique THEN 1 ELSE 0 END) AS nb_psychique,
-            sum(CASE WHEN ac.accomp_suppression THEN 1 ELSE 0 END) AS nb_suppression,
-            count(*) AS total
-        FROM faits_signalements f
-        JOIN dim_accompagnement ac ON f.accomp_id = ac.accomp_id
-        {_base_joins()}
-        {where_sql};
-    """
-    df = _query(sql, params)
-    total = df.loc[0, "total"]
-    for col in ["nb_juridique", "nb_psychique", "nb_suppression"]:
-        df[col.replace("nb_", "pct_")] = round(100.0 * df.loc[0, col] / total, 1) if total > 0 else 0.0
-    return df
+def kpi6b_type_accompagnement(**filtres):
+    """KPI 6b : Détail des types d'accompagnement."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    # On suppose que typeAccompagnement contient des valeurs comme "Juridique;Psychique;Suppression"
+    df_accomp = df[df['accompagnement'] == 'Oui'].copy()
+    if df_accomp.empty:
+        return pd.DataFrame({'nb_juridique': [0], 'nb_psychique': [0], 'nb_suppression': [0], 'total': [0]})
+    
+    # Compter les types
+    nb_juridique = df_accomp['typeAccompagnement'].str.contains('Juridique', na=False).sum()
+    nb_psychique = df_accomp['typeAccompagnement'].str.contains('Psychique', na=False).sum()
+    nb_suppression = df_accomp['typeAccompagnement'].str.contains('Suppression', na=False).sum()
+    total = len(df_accomp)
+    
+    df_result = pd.DataFrame({
+        'nb_juridique': [nb_juridique],
+        'nb_psychique': [nb_psychique],
+        'nb_suppression': [nb_suppression],
+        'total': [total]
+    })
+    
+    for col in ['nb_juridique', 'nb_psychique', 'nb_suppression']:
+        df_result[col.replace('nb_', 'pct_')] = round(100.0 * df_result.loc[0, col] / total, 1) if total > 0 else 0.0
+    
+    return df_result
 
 
-def kpi7_anonymat(date_debut=None, date_fin=None, plateforme=None,
-                   type_cyberviolence=None) -> pd.DataFrame:
-    where_sql, params = _clause_filtre(date_debut, date_fin, plateforme, type_cyberviolence)
-    besoin_type = type_cyberviolence is not None
-    sql = f"""
-        SELECT f.anonymat, count(*) AS nb
-        FROM faits_signalements f
-        {_base_joins(besoin_type)}
-        {where_sql}
-        GROUP BY f.anonymat
-        ORDER BY nb DESC;
-    """
-    return _ajouter_pourcentage(_query(sql, params))
+def kpi7_anonymat(**filtres):
+    """KPI 7 : Taux d'anonymat."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    result = df['anonymat'].value_counts().reset_index()
+    result.columns = ['anonymat', 'nb']
+    return _ajouter_pourcentage(result)
 
 
-def kpi8_langue(date_debut=None, date_fin=None, plateforme=None,
-                 type_cyberviolence=None) -> pd.DataFrame:
-    where_sql, params = _clause_filtre(date_debut, date_fin, plateforme, type_cyberviolence)
-    besoin_type = type_cyberviolence is not None
-    sql = f"""
-        SELECT f.langue, count(*) AS nb
-        FROM faits_signalements f
-        {_base_joins(besoin_type)}
-        {where_sql}
-        GROUP BY f.langue
-        ORDER BY nb DESC;
-    """
-    return _ajouter_pourcentage(_query(sql, params))
+def kpi8_langue(**filtres):
+    """KPI 8 : Répartition par langue."""
+    df = appliquer_filtres(df_global, filtres)
+    if df.empty:
+        return pd.DataFrame()
+    
+    result = df['langue'].value_counts().reset_index()
+    result.columns = ['langue', 'nb']
+    return _ajouter_pourcentage(result)
+
+# ================================================================
+# FONCTIONS UTILITAIRES
+# ================================================================
+
+def liste_plateformes():
+    """Retourne la liste des plateformes disponibles."""
+    if df_global.empty:
+        return []
+    return df_global['plateforme'].dropna().unique().tolist()
 
 
-def liste_plateformes() -> list:
-    return _query("SELECT plateforme FROM dim_plateforme ORDER BY plateforme;")["plateforme"].tolist()
+def liste_types_cyberviolence():
+    """Retourne la liste des types de cyberviolence disponibles."""
+    if df_global.empty:
+        return []
+    return df_global['cyberharcelementType'].dropna().unique().tolist()
 
 
-def liste_types_cyberviolence() -> list:
-    return _query(
-        "SELECT type_cyberviolence FROM dim_type_cyberviolence ORDER BY type_cyberviolence;"
-    )["type_cyberviolence"].tolist()
+def bornes_dates():
+    """Retourne les dates min et max."""
+    if df_global.empty:
+        return pd.Timestamp('2025-01-01').date(), pd.Timestamp('2025-12-31').date()
+    return df_global['date'].min().date(), df_global['date'].max().date()
 
 
-def bornes_dates() -> tuple:
-    df = _query("SELECT min(date_complete) AS min_d, max(date_complete) AS max_d FROM dim_date;")
-    return df.loc[0, "min_d"], df.loc[0, "max_d"]
-
-
-def total_signalements(date_debut=None, date_fin=None, plateforme=None,
-                        type_cyberviolence=None) -> int:
-    where_sql, params = _clause_filtre(date_debut, date_fin, plateforme, type_cyberviolence)
-    besoin_type = type_cyberviolence is not None
-    sql = f"""
-        SELECT count(*) AS total FROM faits_signalements f
-        {_base_joins(besoin_type)}
-        {where_sql};
-    """
-    df = _query(sql, params)
-    return int(df.loc[0, "total"]) if len(df) else 0
-
-
-def historique_imports() -> pd.DataFrame:
-    """Utilisé par la page 'Historique des imports' du dashboard."""
-    sql = """
-        SELECT fichier_source, date_import, nb_lignes_lues, nb_lignes_inserees,
-               nb_lignes_rejetees, statut
-        FROM log_imports
-        ORDER BY date_import DESC;
-    """
-    return _query(sql)
+def historique_imports():
+    """Retourne un DataFrame vide (pas d'historique sans PostgreSQL)."""
+    return pd.DataFrame(columns=['fichier_source', 'date_import', 'nb_lignes_lues', 
+                                 'nb_lignes_inserees', 'nb_lignes_rejetees', 'statut'])
