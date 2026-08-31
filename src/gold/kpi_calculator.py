@@ -31,7 +31,7 @@ def load_data():
             df['date'] = pd.to_datetime(df['date'])
             return df
     
-    # Fallback : essayer de trouver n'importe quel CSV
+    # Fallback : chercher n'importe où
     for path in Path('.').rglob('signalements_clean.csv'):
         if path.exists():
             df = pd.read_csv(path)
@@ -41,7 +41,7 @@ def load_data():
     st.error("❌ Fichier de données non trouvé !")
     return pd.DataFrame()
 
-# Chargement global
+# Charger les données une fois
 df_global = load_data()
 
 # ================================================================
@@ -73,9 +73,6 @@ def _ajouter_pourcentage(df, colonne_nb="nb"):
     df["pct"] = (df[colonne_nb] / total * 100).round(1) if total > 0 else 0.0
     return df
 
-# ================================================================
-# KPI 1 à 8
-# ================================================================
 
 def total_signalements(**filtres):
     """Total des signalements."""
@@ -166,12 +163,10 @@ def kpi6b_type_accompagnement(**filtres):
     if df.empty:
         return pd.DataFrame()
     
-    # On suppose que typeAccompagnement contient des valeurs comme "Juridique;Psychique;Suppression"
     df_accomp = df[df['accompagnement'] == 'Oui'].copy()
     if df_accomp.empty:
         return pd.DataFrame({'nb_juridique': [0], 'nb_psychique': [0], 'nb_suppression': [0], 'total': [0]})
     
-    # Compter les types
     nb_juridique = df_accomp['typeAccompagnement'].str.contains('Juridique', na=False).sum()
     nb_psychique = df_accomp['typeAccompagnement'].str.contains('Psychique', na=False).sum()
     nb_suppression = df_accomp['typeAccompagnement'].str.contains('Suppression', na=False).sum()
@@ -211,9 +206,6 @@ def kpi8_langue(**filtres):
     result.columns = ['langue', 'nb']
     return _ajouter_pourcentage(result)
 
-# ================================================================
-# FONCTIONS UTILITAIRES
-# ================================================================
 
 def liste_plateformes():
     """Retourne la liste des plateformes disponibles."""
