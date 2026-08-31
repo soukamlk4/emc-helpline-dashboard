@@ -16,13 +16,26 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 ENV_PATH = PROJECT_ROOT / ".env"
 
-if not ENV_PATH.exists():
-    raise FileNotFoundError(
-        f"Fichier .env introuvable à {ENV_PATH}. "
-        f"Copie .env.example en .env à la racine du projet et remplis tes identifiants."
-    )
+# Détecter si on est sur Streamlit Cloud
+IS_CLOUD = os.environ.get('IS_STREAMLIT_CLOUD', 'false').lower() == 'true'
 
-load_dotenv(dotenv_path=ENV_PATH)
+# Si on est sur le cloud, on ignore le .env (ou on le crée s'il n'existe pas)
+if IS_CLOUD:
+    # Créer un .env factice si nécessaire
+    if not ENV_PATH.exists():
+        ENV_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(ENV_PATH, 'w') as f:
+            f.write("DB_HOST=localhost\nDB_PORT=5432\nDB_NAME=emc_helpline\nDB_USER=postgres\nDB_PASSWORD=dummy")
+    
+    # Charger les variables d'environnement (ou utiliser des valeurs par défaut)
+    load_dotenv(dotenv_path=ENV_PATH)
+else:
+    if not ENV_PATH.exists():
+        raise FileNotFoundError(
+            f"Fichier .env introuvable à {ENV_PATH}. "
+            f"Copie .env.example en .env à la racine du projet et remplis tes identifiants."
+        )
+    load_dotenv(dotenv_path=ENV_PATH)
 
 DB_CONFIG = {
     "host": os.getenv("DB_HOST", "localhost"),
@@ -32,7 +45,10 @@ DB_CONFIG = {
     "password": os.getenv("DB_PASSWORD", "soukaina2004"),
 }
 
-if not DB_CONFIG["password"]:
+if IS_CLOUD:
+    # Sur le cloud, PostgreSQL n'est pas utilisé - on désactive la vérification
+    pass
+elif not DB_CONFIG["password"]:
     raise RuntimeError(
         "DB_PASSWORD manquant : vérifie le contenu de ton fichier .env."
     )
