@@ -194,7 +194,7 @@ if page == "Tableau de bord":
     # (titre demandé par l'encadrante : ne pas parler de
     # "personnes concernées")
     # ------------------------------------------------------------
-    st.subheader("👤 Répartition des signalements selon le genre et la tranche d'âge")
+    st.subheader(" Répartition des signalements selon le genre et la tranche d'âge")
     c1, c2 = st.columns(2)
     with c1:
         st.caption("Répartition par genre")
@@ -220,7 +220,7 @@ if page == "Tableau de bord":
     # ------------------------------------------------------------
     # NATURE DES SIGNALEMENTS
     # ------------------------------------------------------------
-    st.subheader("🛡️ Typologie des cyberviolences")
+    st.subheader(" Typologie des cyberviolences")
     fig4 = px.bar(
         df_type, x="nb", y="type_cyberviolence", orientation="h",
         color="type_cyberviolence", color_discrete_sequence=PALETTE,
@@ -236,7 +236,7 @@ if page == "Tableau de bord":
     # (langues affichées en toutes lettres -- Français / Arabe --
     # gérées directement par kpi_calculator.kpi8_langue)
     # ------------------------------------------------------------
-    st.subheader("🌐 Canaux et langues utilisés")
+    st.subheader(" Canaux et langues utilisés")
     c3, c4 = st.columns(2)
     with c3:
         st.caption("Répartition par plateforme")
@@ -266,7 +266,7 @@ if page == "Tableau de bord":
     # (3e colonne ajoutée pour le type d'accompagnement, demande
     # de l'encadrante)
     # ------------------------------------------------------------
-    st.subheader("🤝 Prise en charge des signalements")
+    st.subheader(" Prise en charge des signalements")
     c5, c6, c7 = st.columns(3)
     with c5:
         st.caption("Taux d'accompagnement")
@@ -308,7 +308,7 @@ if page == "Tableau de bord":
 # PAGE : IMPORTER DES DONNÉES
 # ================================================================
 elif page == "Importer des données":
-    st.subheader("📤 Importer un nouveau fichier de signalements")
+    st.subheader("Importer un nouveau fichier de signalements")
     st.write(
         "Le fichier sera nettoyé, validé, puis ajouté au data warehouse. "
         "Les lignes déjà présentes ne sont jamais dupliquées."
@@ -341,7 +341,7 @@ elif page == "Importer des données":
 # PAGE : HISTORIQUE DES IMPORTS
 # ================================================================
 elif page == "Historique des imports":
-    st.subheader("📋 Historique des imports")
+    st.subheader(" Historique des imports")
     df_historique = kpi.historique_imports()
     if len(df_historique) == 0:
         st.info("Aucun import enregistré pour le moment.")
