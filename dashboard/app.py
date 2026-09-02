@@ -175,7 +175,7 @@ if page == "Tableau de bord":
     # ------------------------------------------------------------
     # TENDANCE TEMPORELLE
     # ------------------------------------------------------------
-    st.subheader("📈 Évolution mensuelle du nombre de signalements")
+    st.subheader(" Évolution mensuelle du nombre de signalements")
     df_volume = kpi.kpi1_volume_mensuel(**filtres_sans_type)
     if len(df_volume):
         df_volume["periode"] = df_volume["annee"].astype(str) + "-" + df_volume["mois"].astype(str).str.zfill(2)
