@@ -235,7 +235,7 @@ if page == "Tableau de bord":
         st.caption("Répartition par plateforme")
         df_plat = kpi.kpi5_plateforme(**filtres_sans_type)
         fig5 = px.bar(
-            df_plat, x="plateforme", y="nb", text="pct", color="plateforme",
+            df_plat, x="plateforme", y="nombre", text="pct", color="plateforme",
             color_discrete_sequence=PALETTE,
         )
         fig5.update_traces(texttemplate="%{text}%", textposition="outside")
@@ -245,7 +245,7 @@ if page == "Tableau de bord":
         st.caption("Répartition par langue")
         df_langue = kpi.kpi8_langue(**filtres_sans_type)
         fig8 = px.bar(
-            df_langue, x="langue", y="nb", text="pct", color="langue",
+            df_langue, x="langue", y="nombre", text="pct", color="langue",
             color_discrete_sequence=PALETTE,
         )
         fig8.update_traces(texttemplate="%{text}%", textposition="outside")
