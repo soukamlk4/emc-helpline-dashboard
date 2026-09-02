@@ -201,7 +201,7 @@ if page == "Tableau de bord":
     with c2:
         st.caption("Répartition par tranche d'âge")
         fig3 = px.bar(
-            df_age, x="tranche_age", y="nombre", text="pct", color="tranche_age",
+            df_age, x="tranche_age", y="nb", text="pct", color="tranche_age",
             color_discrete_sequence=PALETTE,
         )
         fig3.update_traces(texttemplate="%{text}%", textposition="outside")
@@ -215,7 +215,7 @@ if page == "Tableau de bord":
     # ------------------------------------------------------------
     st.subheader("Typologie des cyberviolences")
     fig4 = px.bar(
-        df_type, x="nombre", y="type_cyberviolence", orientation="h",
+        df_type, x="nb", y="type_cyberviolence", orientation="h",
         color="type_cyberviolence", color_discrete_sequence=PALETTE,
     )
     fig4.update_yaxes(categoryorder="total ascending")
@@ -265,7 +265,7 @@ if page == "Tableau de bord":
         st.caption("Taux d'accompagnement")
         df_accomp = kpi.kpi6_accompagnement(**filtres_sans_type)
         fig6 = px.pie(
-            df_accomp, names="accompagnement", values="nombre", hole=0.5,
+            df_accomp, names="accompagnement", values="nb", hole=0.5,
             color_discrete_sequence=PALETTE_DIVERGENTE,
         )
         fig6.update_traces(textinfo="percent+label")
@@ -275,7 +275,7 @@ if page == "Tableau de bord":
         st.caption("Taux d'anonymat")
         df_anonymat = kpi.kpi7_anonymat(**filtres_sans_type)
         fig7 = px.pie(
-            df_anonymat, names="anonymat", values="nombre", hole=0.5,
+            df_anonymat, names="anonymat", values="nb", hole=0.5,
             color_discrete_sequence=[PALETTE[4], PALETTE[2]],
         )
         fig7.update_traces(textinfo="percent+label")
