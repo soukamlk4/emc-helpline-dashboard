@@ -1,11 +1,10 @@
 """
 Dashboard EMC Helpline — Jalon 3
 Tableau de bord interactif connecté au data warehouse PostgreSQL.
-Sections : indicateurs clés, graphiques, insights, recommandations,
-import de nouvelles données, historique des imports.
+Sections : indicateurs clés, graphiques, import de nouvelles données,
+historique des imports.
 """
 
-import re
 import sys
 import tempfile
 from pathlib import Path
@@ -16,54 +15,7 @@ import streamlit as st
 import plotly.express as px
 
 from src.gold import kpi_calculator as kpi
-from src.gold.insights import generer_insights, generer_recommandations
 from src.ingestion.file_ingestion import ingest_file
-
-
-def _mettre_en_evidence(texte: str, couleur: str) -> str:
-    """Convertit le **gras** markdown en <span> coloré pour un rendu type BI."""
-    return re.sub(
-        rf'\*\*(.+?)\*\*',
-        rf'<span style="color:{couleur}; font-weight:700;">\1</span>',
-        texte,
-    )
-
-
-def rendre_cartes_insights(lignes: list[str], palette: list[str]) -> str:
-    cartes = []
-    for i, ligne in enumerate(lignes):
-        couleur = palette[i % len(palette)]
-        texte = _mettre_en_evidence(ligne, couleur)
-        carte = (
-            f'<div style="display:flex;align-items:flex-start;gap:14px;background:#FFFFFF;'
-            f'border:1px solid #E2E8F0;border-left:4px solid {couleur};border-radius:10px;'
-            f'padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(15,23,42,0.06);">'
-            f'<div style="min-width:30px;height:30px;border-radius:50%;background:{couleur}22;'
-            f'color:{couleur};font-weight:700;font-size:13px;display:flex;align-items:center;'
-            f'justify-content:center;flex-shrink:0;">{i + 1:02d}</div>'
-            f'<div style="font-size:14.5px;color:#1E293B;line-height:1.55;padding-top:2px;">{texte}</div>'
-            f'</div>'
-        )
-        cartes.append(carte)
-    return '<div style="display:flex;flex-direction:column;">' + "".join(cartes) + '</div>'
-
-
-def rendre_cartes_recommandations(lignes: list[str], palette: list[str]) -> str:
-    cartes = []
-    for i, ligne in enumerate(lignes):
-        couleur = palette[i % len(palette)]
-        texte = _mettre_en_evidence(ligne, couleur)
-        carte = (
-            f'<div style="background:{couleur}0F;border:1px solid {couleur}40;border-radius:10px;'
-            f'padding:14px 16px;margin-bottom:10px;">'
-            f'<span style="display:inline-block;background:{couleur};color:#FFFFFF;font-size:10.5px;'
-            f'font-weight:700;letter-spacing:0.6px;padding:3px 9px;border-radius:5px;'
-            f'margin-bottom:8px;">ACTION {i + 1:02d}</span>'
-            f'<div style="font-size:14.5px;color:#1E293B;line-height:1.55;margin-top:8px;">{texte}</div>'
-            f'</div>'
-        )
-        cartes.append(carte)
-    return '<div style="display:flex;flex-direction:column;">' + "".join(cartes) + '</div>'
 
 
 st.set_page_config(page_title="EMC Helpline — Tableau de bord", layout="wide")
@@ -231,9 +183,11 @@ if page == "Tableau de bord":
     st.divider()
 
     # ------------------------------------------------------------
-    # PROFIL DES VICTIMES
+    # RÉPARTITION SELON LE GENRE ET LA TRANCHE D'ÂGE
+    # (titre demandé par l'encadrante : ne pas parler de
+    # "personnes concernées")
     # ------------------------------------------------------------
-    st.subheader("Profil des personnes concernées")
+    st.subheader("Répartition des signalements selon le genre et la tranche d'âge")
     c1, c2 = st.columns(2)
     with c1:
         st.caption("Répartition par genre")
@@ -272,6 +226,8 @@ if page == "Tableau de bord":
 
     # ------------------------------------------------------------
     # CANAUX & LANGUE
+    # (langues affichées en toutes lettres -- Français / Arabe --
+    # gérées directement par kpi_calculator.kpi8_langue)
     # ------------------------------------------------------------
     st.subheader("Canaux et langues utilisés")
     c3, c4 = st.columns(2)
@@ -300,9 +256,11 @@ if page == "Tableau de bord":
 
     # ------------------------------------------------------------
     # PRISE EN CHARGE
+    # (3e colonne ajoutée pour le type d'accompagnement, demande
+    # de l'encadrante)
     # ------------------------------------------------------------
     st.subheader("Prise en charge des signalements")
-    c5, c6 = st.columns(2)
+    c5, c6, c7 = st.columns(3)
     with c5:
         st.caption("Taux d'accompagnement")
         df_accomp = kpi.kpi6_accompagnement(**filtres_sans_type)
@@ -323,29 +281,21 @@ if page == "Tableau de bord":
         fig7.update_traces(textinfo="percent+label")
         fig7.update_layout(margin=dict(t=10, b=10))
         st.plotly_chart(fig7, use_container_width=True)
-
-    st.divider()
-
-    # ------------------------------------------------------------
-    # INSIGHTS & RECOMMANDATIONS
-    # ------------------------------------------------------------
-    ci, cr = st.columns(2)
-    with ci:
-        st.subheader("Insights")
-        insights = generer_insights(**filtres_sans_type)
-        st.markdown(rendre_cartes_insights(insights, PALETTE), unsafe_allow_html=True)
-    with cr:
-        st.subheader("Pistes de recommandations")
-        recos = generer_recommandations(**filtres_sans_type)
-        if recos:
-            st.markdown(rendre_cartes_recommandations(recos, PALETTE), unsafe_allow_html=True)
-        else:
-            st.markdown(
-                '<div style="background:#F8FAFC;border:1px dashed #CBD5E1;border-radius:10px;'
-                'padding:18px;text-align:center;color:#64748B;font-size:14px;">'
-                "Aucun seuil d'alerte franchi sur la sélection actuelle.</div>",
-                unsafe_allow_html=True,
-            )
+    with c7:
+        st.caption("Répartition par type d'accompagnement")
+        df_type_accomp = kpi.kpi6b_type_accompagnement(**filtres_sans_type)
+        df_type_accomp_long = df_type_accomp[["pct_juridique", "pct_psychique", "pct_suppression"]].T
+        df_type_accomp_long.columns = ["pct"]
+        df_type_accomp_long.index = ["Juridique", "Psychique", "Suppression"]
+        df_type_accomp_long = df_type_accomp_long.reset_index().rename(columns={"index": "type"})
+        fig9 = px.bar(
+            df_type_accomp_long, x="type", y="pct", text="pct", color="type",
+            color_discrete_sequence=PALETTE,
+        )
+        fig9.update_traces(texttemplate="%{text}%", textposition="outside")
+        fig9.update_layout(showlegend=False, margin=dict(t=10, b=10),
+                            yaxis_title="Pourcentage (%)", xaxis_title="")
+        st.plotly_chart(fig9, use_container_width=True)
 
 # ================================================================
 # PAGE : IMPORTER DES DONNÉES
