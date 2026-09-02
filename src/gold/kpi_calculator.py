@@ -142,8 +142,8 @@ def kpi5_plateforme(**filtres):
         return pd.DataFrame()
     
     result = df['plateforme'].value_counts().reset_index()
-    result.columns = ['plateforme', 'nb']
-    return _ajouter_pourcentage(result)
+    result.columns = ['plateforme', 'nombre']
+    return _ajouter_pourcentage(result, colonne_nb="nombre")
 
 
 def kpi6_accompagnement(**filtres):
@@ -196,6 +196,12 @@ def kpi7_anonymat(**filtres):
     return _ajouter_pourcentage(result)
 
 
+# Mapping des codes langue vers les libellés complets
+LANGUES_LIBELLES = {
+    "fr": "Français",
+    "ar": "Arabe"
+}
+
 def kpi8_langue(**filtres):
     """KPI 8 : Répartition par langue."""
     df = appliquer_filtres(df_global, filtres)
@@ -203,8 +209,12 @@ def kpi8_langue(**filtres):
         return pd.DataFrame()
     
     result = df['langue'].value_counts().reset_index()
-    result.columns = ['langue', 'nb']
-    return _ajouter_pourcentage(result)
+    result.columns = ['langue', 'nombre']
+    result = _ajouter_pourcentage(result, colonne_nb="nombre")
+    
+    # Convertir les codes en libellés complets (Français / Arabe)
+    result['langue'] = result['langue'].map(LANGUES_LIBELLES).fillna(result['langue'])
+    return result
 
 
 def liste_plateformes():
