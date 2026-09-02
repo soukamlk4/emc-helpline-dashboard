@@ -282,7 +282,7 @@ if page == "Tableau de bord":
         fig7.update_layout(margin=dict(t=10, b=10))
         st.plotly_chart(fig7, use_container_width=True)
     with c7:
-        st.caption("Répartition par type d'accompagnement")
+        st.caption("Types d'accompagnement sollicités (parmi les signalements accompagnés)")
         df_type_accomp = kpi.kpi6b_type_accompagnement(**filtres_sans_type)
         df_type_accomp_long = df_type_accomp[["pct_juridique", "pct_psychique", "pct_suppression"]].T
         df_type_accomp_long.columns = ["pct"]
